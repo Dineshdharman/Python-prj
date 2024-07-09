@@ -8,7 +8,7 @@ app.secret_key = 'your_secret_key'
 mysql_config = {
     "host": "localhost",
     "user": "root",
-    "password": "Dine@2003",
+    "password": "Your Password",
     "db": "bike",
     "cursorclass": pymysql.cursors.DictCursor  # Set cursor class to DictCursor
 }
