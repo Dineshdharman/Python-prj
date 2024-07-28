@@ -1,7 +1,7 @@
 import MySQLdb
 
 try:
-    con = MySQLdb.connect(host="localhost", user="root", password="Dine@2003", db="bike")
+    con = MySQLdb.connect(host="localhost", user="root", password="your password", db="----")
     cur = con.cursor()
     cur.execute("SELECT VERSION()")
     data = cur.fetchone()
