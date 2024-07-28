@@ -2,14 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AntiMatter Bank</title>
+    <title>AntiMatter Bank - Choice</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h2>Please choose one of them</h2>
-    <form action="{{  (url_for('choice')) }}" method="get">
-        <button type="submit" name="account_type" value="savings">Savings</button><br><br>
-        <button type="submit" name="account_type" value="current">Current</button>
-
+    <div class="container">
+         <h1>Choose Account Type</h1>
+        <form action="/account_choice" method="post">
+            <button type="submit" name="account_type" value="savings">Savings Account</button>
+            <button type="submit" name="account_type" value="current">Current Account</button>
     </form>
+    {% if message %}
+    <p>{{ message }}</p>
+    {% endif %}
+    </div>
 </body>
 </html>
